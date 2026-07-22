@@ -26,11 +26,11 @@ pip install -r requirements.txt
 python run.py
 ```
 
-环境变量与 `gpm-server` 一致：`GPM_HOST` / `GPM_PORT` / `GPM_DATA_DIR` / `GPM_SERVER_NAME` / `GPM_MAX_UPLOAD_MB` / `GPM_ADMIN_URL` / `GPM_PUBLIC_BASE_URL` / `GPM_REPORTER_INTERVAL` / `GPM_REPORTER_ID`。
+环境变量与 `gpm-server` 一致：`GPM_HOST` / `GPM_PORT` / `GPM_DATA_DIR` / `GPM_SERVER_NAME` / `GPM_MAX_UPLOAD_MB` / `GPM_ADMIN_URL` / `GPM_PUBLIC_BASE_URL` / `GPM_REPORTER_INTERVAL` / `GPM_REPORTER_ID` / `GPM_LIGHT_DISK_YELLOW` / `GPM_LIGHT_DISK_RED` / `GPM_LIGHT_ERROR_RED`。
 
 ## Push 模型上报
 
-与 `gpm-server` 一样，配置 `GPM_ADMIN_URL` 后会启动后台 Reporter 线程，定期向 web-admin 主动上报心跳（在线状态、整合包/模组数量、推送条目等）。web-admin 不再轮询。
+与 `gpm-server` 一样，配置 `GPM_ADMIN_URL` 后会启动后台 Reporter 线程，定期向 web-admin 主动上报心跳（在线状态、整合包/模组数量、推送条目、状态指示灯等）。web-admin 不再轮询。灯色计算与阈值与 `gpm-server` 一致。
 
 ## API
 
